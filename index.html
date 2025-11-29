@@ -1,0 +1,39 @@
+html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КвизБаттл - Игровой раунд</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 КвизБаттл</h1>
+            <p class="subtitle">Командная викторина по компьютерным играм</p>
+        </header>
+        
+        <main class="main-content">
+            <div class="rules">
+                <h2>Правила игры:</h2>
+                <ul>
+                    <li>Компьютер случайно разделит вас на 2 команды</li>
+                    <li>Отвечайте на вопросы про игры</li>
+                    <li>За каждый правильный ответ команда получает 1 балл</li>
+                    <li>Побеждает команда с наибольшим количеством очков!</li>
+                </ul>
+            </div>
+            
+            <button class="start-btn" onclick="startGame()">Начать битву!</button>
+        </main>
+    </div>
+
+    <script>
+        function startGame() {
+            // Переходим на страницу игры
+            window.location.href = 'game.html';
+        }
+    </script>
+</body>
+</html>

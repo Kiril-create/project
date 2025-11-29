@@ -1,0 +1,51 @@
+html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра - КвизБаттл</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 КвизБаттл</h1>
+        </header>
+        
+        <!-- Счёт команд -->
+        <div class="score-board">
+            <div class="team" id="teamA">
+                <h3>Команда Синих</h3>
+                <div class="score" id="scoreA">0</div>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team" id="teamB">
+                <h3>Команда Красных</h3>
+                <div class="score" id="scoreB">0</div>
+            </div>
+        </div>
+        
+        <!-- Область с вопросом -->
+        <div class="question-area">
+            <div class="question-counter">
+                Вопрос <span id="currentQuestion">1</span>/<span id="totalQuestions">5</span>
+            </div>
+            <div class="question" id="questionText">
+                <!-- Вопрос будет загружен через JavaScript -->
+            </div>
+            
+            <!-- Варианты ответов -->
+            <div class="answers" id="answersContainer">
+                <!-- Кнопки ответов появятся здесь -->
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button class="restart-btn" onclick="restartGame()">Начать заново</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>result.html

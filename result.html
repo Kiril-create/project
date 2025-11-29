@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты - КвизБаттл</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 КвизБаттл</h1>
+        </header>
+        
+        <div class="result-content">
+            <div class="result-title" id="resultTitle">
+                <!-- Заголовок результата -->
+            </div>
+            
+            <div class="final-scores">
+                <div class="final-team">
+                    <h3>Команда Синих</h3>
+                    <div class="final-score" id="finalScoreA">0</div>
+                </div>
+                <div class="final-team">
+                    <h3>Команда Красных</h3>
+                    <div class="final-score" id="finalScoreB">0</div>
+                </div>
+            </div>
+            
+            <div class="winner-message" id="winnerMessage">
+                <!-- Сообщение о победителе -->
+            </div>
+            
+            <button class="play-again-btn" onclick="playAgain()">Играть ещё раз!</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
