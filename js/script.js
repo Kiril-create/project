@@ -24,7 +24,7 @@ const questions = [
         question: "Как называется игра, где нужно 'среди нас' найти предателя?",
         answers: ["Fortnite", "Fall Guys", "Among Us", "Rocket League"],
         correct: 2
-    }
+    },
     {
         question: "Какой персонаж является талисманом Nintendo?",
         answers: ["Соник", "Марио", "Кратос", "Мастер Чиф"],
@@ -100,7 +100,6 @@ const questions = [
         answers: ["Brawl Stars", "Clash Royale", "Mobile Legends", "League of Legends"],
         correct: 1
     }
-];
 ];
 
 // Переменные игры
@@ -257,12 +256,16 @@ function playAgain() {
 // Инициализация игры при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
     // Определяем, на какой странице находимся
-    if (window.location.pathname.includes('game.html')) {
+    if (window.location.pathname.includes('game.html') || 
+        window.location.pathname.endsWith('game.html')) {
         // Устанавливаем общее количество вопросов
-        document.getElementById('totalQuestions').textContent = questions.length;
+        const totalQuestionsElement = document.getElementById('totalQuestions');
+        if (totalQuestionsElement) {
+            totalQuestionsElement.textContent = questions.length;
+        }
         loadQuestion();
-    } else if (window.location.pathname.includes('result.html')) {
+    } else if (window.location.pathname.includes('result.html') || 
+               window.location.pathname.endsWith('result.html')) {
         showResults();
     }
-
 });
