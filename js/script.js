@@ -393,7 +393,10 @@ function useFiftyFiftyHint() {
     }
     
     // Перемешиваем неправильные ответы
-    shuffleArray(wrongAnswers);
+    for (let i = wrongAnswers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [wrongAnswers[i], wrongAnswers[j]] = [wrongAnswers[j], wrongAnswers[i]];
+    }
     
     // Оставляем только один неправильный ответ (плюс правильный)
     const answersToHide = wrongAnswers.slice(0, 2);
@@ -409,15 +412,28 @@ function useFiftyFiftyHint() {
     
     // Обновляем кнопку подсказки
     updateHintButton();
+    
+    // Показываем сообщение о использовании подсказки
+    showHintUsedMessage();
 }
 
-// Функция перемешивания массива
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+// Функция показа сообщения о использовании подсказки
+function showHintUsedMessage() {
+    const questionElement = document.getElementById('questionText');
+    if (!questionElement) return;
+    
+    const originalText = questionElement.textContent;
+    questionElement.innerHTML = `
+        <div class="hint-used-message">
+            <i class="fas fa-percentage" style="font-size: 2em; margin-bottom: 10px; color: #8E2DE2;"></i>
+            <h3>Подсказка 50/50 использована!</h3>
+            <p>2 неверных ответа скрыты</p>
+        </div>
+    `;
+    
+    setTimeout(() => {
+        questionElement.textContent = originalText;
+    }, 1500);
 }
 
 // Функция анимации добавления очков
@@ -539,7 +555,7 @@ function playAgain() {
 }
 
 // Функция возврата на главную со страницы результатов
-function goHome() {
+function goHomeFromResults() {
     window.location.href = 'index.html';
 }
 
@@ -554,8 +570,39 @@ document.addEventListener('DOMContentLoaded', function() {
         if (totalQuestionsElement) {
             totalQuestionsElement.textContent = questions.length;
         }
+        
+        // Добавляем обработчики событий
+        const hintUseBtn = document.getElementById('hintUseBtn');
+        const restartBtn = document.getElementById('restartBtn');
+        const homeBtn = document.getElementById('homeBtn');
+        
+        if (hintUseBtn) {
+            hintUseBtn.addEventListener('click', useFiftyFiftyHint);
+        }
+        
+        if (restartBtn) {
+            restartBtn.addEventListener('click', restartGame);
+        }
+        
+        if (homeBtn) {
+            homeBtn.addEventListener('click', goHome);
+        }
+        
+        // Загружаем первый вопрос
         loadQuestion();
     } else if (path.includes('result.html') || path.endsWith('result.html')) {
+        // Добавляем обработчики для страницы результатов
+        const playAgainBtn = document.querySelector('.play-again-btn');
+        const homeBtnResult = document.querySelector('.home-btn');
+        
+        if (playAgainBtn) {
+            playAgainBtn.addEventListener('click', playAgain);
+        }
+        
+        if (homeBtnResult) {
+            homeBtnResult.addEventListener('click', goHomeFromResults);
+        }
+        
         showResults();
     }
 });
