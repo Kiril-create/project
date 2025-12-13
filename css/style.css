@@ -1,4 +1,3 @@
-/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -14,27 +13,27 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    background: rgba(25, 25, 35, 0.9);
+    background: rgba(25, 25, 35, 0.95);
     border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Заголовок */
 header {
     text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
-    font-size: 3.5em;
+    font-size: 2.8em;
     margin-bottom: 10px;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -45,7 +44,7 @@ header h1 {
 }
 
 .subtitle {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #aaa;
     font-style: italic;
 }
@@ -53,9 +52,9 @@ header h1 {
 /* Главная страница */
 .rules {
     background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border-left: 5px solid #4ecdc4;
 }
 
@@ -63,7 +62,7 @@ header h1 {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #4ecdc4;
 }
 
@@ -72,19 +71,13 @@ header h1 {
 }
 
 .rules li {
-    margin: 12px 0;
-    padding: 10px 15px;
+    margin: 10px 0;
+    padding: 8px 12px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    transition: transform 0.3s;
-}
-
-.rules li:hover {
-    transform: translateX(10px);
-    background: rgba(255, 255, 255, 0.05);
+    gap: 12px;
 }
 
 .rules li i {
@@ -96,17 +89,16 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin: 40px 0;
+    gap: 20px;
+    margin: 30px 0;
 }
 
 .preview-team {
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     text-align: center;
     flex: 1;
-    max-width: 300px;
-    transition: all 0.3s;
+    max-width: 250px;
 }
 
 .blue-team {
@@ -122,50 +114,46 @@ header h1 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 .preview-score {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .vs {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
     color: #ffd166;
-    text-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 /* Кнопки */
 .start-btn {
     display: block;
     width: 100%;
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    font-size: 1.5em;
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 18px;
+    font-size: 1.3em;
     background: linear-gradient(45deg, #ff6b6b, #ff8e53);
     color: white;
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .start-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
-}
-
-.start-btn:active {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 107, 107, 0.3);
 }
 
 /* Игровая страница */
@@ -173,18 +161,16 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 0;
-    gap: 20px;
+    margin: 20px 0;
+    gap: 15px;
 }
 
 .team {
     flex: 1;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
 }
 
 .team.blue-team {
@@ -197,7 +183,7 @@ header h1 {
 
 .team.active {
     transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .team-header {
@@ -205,23 +191,23 @@ header h1 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .team-header h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .score {
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: bold;
-    margin: 15px 0;
+    margin: 10px 0;
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 .team-turn {
     background: rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 8px;
     border-radius: 8px;
     font-size: 0.9em;
     display: flex;
@@ -238,29 +224,81 @@ header h1 {
 
 .vs {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .vs div:first-child {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
     color: #ffd166;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .score-total {
-    font-size: 1.5em;
+    font-size: 1.3em;
     background: rgba(255, 255, 255, 0.1);
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 10px;
+}
+
+/* Индикатор подсказки */
+.hint-indicator {
+    background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hint-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1em;
+}
+
+.hint-info i {
+    color: #ffd166;
+    font-size: 1.3em;
+}
+
+.hint-counter {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.hint-use-btn {
+    background: linear-gradient(45deg, #ffd166, #ff9e00);
+    color: #000;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hint-use-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 209, 102, 0.3);
+}
+
+.hint-use-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Таймер */
 .timer-container {
     background: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 15px;
-    margin: 30px 0;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 20px 0;
     text-align: center;
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
@@ -270,15 +308,15 @@ header h1 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 15px;
-    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-size: 1.1em;
     color: #4ecdc4;
 }
 
 .timer {
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 15px 0;
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -287,21 +325,21 @@ header h1 {
 
 .timer-value {
     color: #ffd166;
-    text-shadow: 0 0 20px rgba(255, 209, 102, 0.5);
-    min-width: 60px;
+    text-shadow: 0 0 15px rgba(255, 209, 102, 0.5);
+    min-width: 50px;
 }
 
 .timer-seconds {
-    font-size: 0.5em;
+    font-size: 0.4em;
     color: #aaa;
 }
 
 .timer-progress {
-    height: 20px;
+    height: 15px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 800px;
+    border-radius: 8px;
+    margin: 15px auto;
+    max-width: 600px;
     position: relative;
     overflow: hidden;
 }
@@ -310,73 +348,48 @@ header h1 {
     height: 100%;
     background: linear-gradient(90deg, #4ecdc4, #ffd166, #ff6b6b);
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
     transition: width 1s linear;
-}
-
-.timer-ticks {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.timer-ticks .tick {
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.timer-hint {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: #aaa;
-    font-size: 0.9em;
 }
 
 /* Вопросы */
 .question-area {
     background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
-    margin: 30px 0;
+    margin: 25px 0;
 }
 
 .question-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.question-counter, .question-category {
+.question-counter, .hint-status {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
-.question-category {
+.hint-status {
     color: #ffd166;
 }
 
 .question {
-    font-size: 1.8em;
-    line-height: 1.6;
-    margin: 30px 0;
-    padding: 25px;
+    font-size: 1.6em;
+    line-height: 1.5;
+    margin: 25px 0;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     text-align: center;
     border-left: 5px solid #4ecdc4;
-    min-height: 150px;
+    min-height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -385,8 +398,8 @@ header h1 {
 .answers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin: 30px 0;
+    gap: 12px;
+    margin: 25px 0;
 }
 
 @media (max-width: 768px) {
@@ -396,36 +409,31 @@ header h1 {
 }
 
 .answer-btn {
-    padding: 25px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.1em;
     cursor: pointer;
     transition: all 0.3s;
     text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 15px;
 }
 
-.answer-btn:hover:not(.disabled) {
+.answer-btn:hover:not(.disabled):not(.hidden-answer) {
     background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     border-color: rgba(255, 255, 255, 0.3);
 }
 
 .answer-btn.correct {
     background: linear-gradient(135deg, #00b09b, #96c93d);
     border-color: #00b09b;
-    transform: scale(1.02);
 }
 
 .answer-btn.incorrect {
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
     border-color: #ff416c;
-    transform: scale(1.02);
 }
 
 .answer-btn.disabled {
@@ -433,44 +441,26 @@ header h1 {
     cursor: not-allowed;
 }
 
-.question-progress {
-    margin-top: 30px;
-}
-
-.progress-bar {
-    height: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: linear-gradient(90deg, #4ecdc4, #45b7d1);
-    width: 5%;
-    transition: width 0.5s ease;
-    border-radius: 5px;
-}
-
-.progress-text {
-    text-align: right;
-    margin-top: 10px;
-    color: #aaa;
+.answer-btn.hidden-answer {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Управление */
 .game-controls {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 15px;
+    margin-top: 25px;
 }
 
 .control-btn {
-    padding: 15px 30px;
+    padding: 12px 25px;
     border: none;
     border-radius: 10px;
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     transition: all 0.3s;
     display: flex;
@@ -484,25 +474,20 @@ header h1 {
     color: white;
 }
 
-.hint-btn {
-    background: linear-gradient(135deg, #00b4db, #0083b0);
-    color: white;
-}
-
 .home-btn {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
 }
 
 .control-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Футер */
 .game-footer {
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 30px;
+    padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     color: #aaa;
@@ -521,39 +506,39 @@ header h1 {
 }
 
 .result-title {
-    font-size: 2.5em;
-    margin: 30px 0;
+    font-size: 2.2em;
+    margin: 25px 0;
     background: linear-gradient(45deg, #ffd166, #ff6b6b, #4ecdc4);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding: 20px;
+    padding: 15px;
 }
 
 .result-icon {
-    font-size: 6em;
-    margin: 30px 0;
+    font-size: 5em;
+    margin: 25px 0;
     animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-15px); }
 }
 
 .final-scores {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    margin: 50px 0;
+    gap: 30px;
+    margin: 40px 0;
 }
 
 .final-team {
     flex: 1;
-    max-width: 300px;
-    padding: 30px;
-    border-radius: 20px;
+    max-width: 250px;
+    padding: 25px;
+    border-radius: 15px;
     text-align: center;
 }
 
@@ -569,63 +554,48 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
 .final-team-header h3 {
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .final-score {
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 15px 0;
     text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.final-team-stats {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.stat {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1.1em;
-}
-
 .final-result-separator {
-    padding: 0 30px;
+    padding: 0 20px;
     text-align: center;
 }
 
 .total-score {
     background: rgba(255, 255, 255, 0.1);
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: #ffd166;
 }
 
 .final-vs {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     color: #ffd166;
 }
 
 .winner-message {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    font-size: 1.4em;
-    line-height: 1.6;
+    border-radius: 12px;
+    font-size: 1.2em;
+    line-height: 1.5;
     border-left: 5px solid;
     animation: fadeIn 1s ease;
 }
@@ -635,72 +605,25 @@ header h1 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.game-stats {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 50px 0;
-    flex-wrap: wrap;
-}
-
-.stat-box {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 15px;
-    min-width: 200px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    transition: transform 0.3s;
-}
-
-.stat-box:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.stat-box i {
-    font-size: 2.5em;
-    color: #4ecdc4;
-}
-
-.stat-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.stat-value {
-    font-size: 2em;
-    font-weight: bold;
-    color: #ffd166;
-}
-
-.stat-label {
-    color: #aaa;
-    font-size: 0.9em;
-}
-
 .result-controls {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 50px 0;
-    flex-wrap: wrap;
+    gap: 15px;
+    margin: 40px 0;
 }
 
 .result-btn {
-    padding: 20px 40px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 15px;
-    font-size: 1.2em;
+    border-radius: 12px;
+    font-size: 1.1em;
     cursor: pointer;
     transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    min-width: 200px;
+    gap: 12px;
+    min-width: 180px;
 }
 
 .play-again-btn {
@@ -708,14 +631,9 @@ header h1 {
     color: white;
 }
 
-.share-btn {
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    color: white;
-}
-
 .result-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Анимации для таймера */
@@ -726,7 +644,7 @@ header h1 {
 
 @keyframes timerDanger {
     0%, 100% { color: #ff6b6b; text-shadow: 0 0 10px #ff0000; }
-    50% { color: #ff0000; text-shadow: 0 0 20px #ff0000; }
+    50% { color: #ff0000; text-shadow: 0 0 15px #ff0000; }
 }
 
 .timer.warning .timer-value {
@@ -740,40 +658,12 @@ header h1 {
 /* Анимация для счёта */
 @keyframes scorePop {
     0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
+    50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
 
 .score-animation {
     animation: scorePop 0.5s ease;
-}
-
-/* Сообщения */
-.success-message, .error-message, .timeout-message {
-    padding: 30px;
-    border-radius: 15px;
-    margin: 20px 0;
-    animation: slideIn 0.5s ease;
-}
-
-@keyframes slideIn {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.success-message {
-    background: linear-gradient(135deg, rgba(0, 176, 155, 0.2), rgba(150, 201, 61, 0.2));
-    border: 2px solid #00b09b;
-}
-
-.error-message {
-    background: linear-gradient(135deg, rgba(255, 65, 108, 0.2), rgba(255, 75, 43, 0.2));
-    border: 2px solid #ff416c;
-}
-
-.timeout-message {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 142, 83, 0.2));
-    border: 2px solid #ff6b6b;
 }
 
 /* Адаптивность */
@@ -783,14 +673,14 @@ header h1 {
     }
     
     header h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
         flex-direction: column;
         gap: 5px;
     }
     
     .score-board {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
     }
     
     .team {
@@ -799,12 +689,7 @@ header h1 {
     
     .final-scores {
         flex-direction: column;
-        gap: 20px;
-    }
-    
-    .game-stats {
-        flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
     
     .result-controls {
@@ -814,105 +699,25 @@ header h1 {
     
     .result-btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
     }
     
     .timer {
-        font-size: 3em;
+        font-size: 2.8em;
     }
     
     .question {
-        font-size: 1.4em;
+        font-size: 1.3em;
         padding: 15px;
     }
+    
+    .hint-indicator {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .hint-use-btn {
+        width: 100%;
+    }
 }
-
-.indicator-team h3 {
-    margin: 5px 0 0 0;
-    color: white;
-    font-size: 1.2em;
-}
-
-.indicator-team span {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9em;
-}
-
-/* Заголовок вопроса с таймером */
-.question-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-/* Таймер */
-.timer-container {
-    text-align: center;
-}
-
-.timer {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #ff6b6b;
-    margin-bottom: 5px;
-}
-
-.timer-progress {
-    width: 200px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.timer-bar {
-    height: 100%;
-    background: linear-gradient(90deg, #ff6b6b, #ffd166);
-    width: 100%;
-    transition: width 1s linear;
-}
-
-/* Анимация для смены команды */
-@keyframes teamSwitch {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-.team-switch-animation {
-    animation: teamSwitch 0.5s ease;
-}
-
-/* Подсветка активной команды в score-board */
-.team.active {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Стили для оставшегося времени */
-.timer.warning {
-    color: #ff6b6b;
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-/* Дополнительные стили для правильных/неправильных ответов */
-.answer-btn.correct {
-    background: linear-gradient(135deg, #51cf66, #40c057);
-    transform: scale(0.98);
-}
-
-.answer-btn.incorrect {
-    background: linear-gradient(135deg, #ff6b6b, #fa5252);
-    transform: scale(0.98);
-}
-
