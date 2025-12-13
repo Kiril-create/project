@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Результаты - КвизБаттл</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🎮 КвизБаттл</h1>
+            <h1><i class="fas fa-trophy"></i> КвизБаттл</h1>
+            <p class="subtitle">Результаты битвы</p>
         </header>
         
         <div class="result-content">
@@ -17,14 +19,44 @@
                 <!-- Заголовок результата -->
             </div>
             
+            <div class="result-icon" id="resultIcon">
+                <!-- Иконка результата -->
+            </div>
+            
             <div class="final-scores">
-                <div class="final-team">
-                    <h3>Команда Синих</h3>
+                <div class="final-team blue-team">
+                    <div class="final-team-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Команда Синих</h3>
+                    </div>
                     <div class="final-score" id="finalScoreA">0</div>
+                    <div class="final-team-stats">
+                        <div class="stat">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Правильных: <span id="correctA">0</span></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="final-team">
-                    <h3>Команда Красных</h3>
+                
+                <div class="final-result-separator">
+                    <div class="total-score">
+                        Итоговый счёт
+                    </div>
+                    <div class="final-vs">VS</div>
+                </div>
+                
+                <div class="final-team red-team">
+                    <div class="final-team-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Команда Красных</h3>
+                    </div>
                     <div class="final-score" id="finalScoreB">0</div>
+                    <div class="final-team-stats">
+                        <div class="stat">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Правильных: <span id="correctB">0</span></span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -32,8 +64,46 @@
                 <!-- Сообщение о победителе -->
             </div>
             
-            <button class="play-again-btn" onclick="playAgain()">Играть ещё раз!</button>
+            <div class="game-stats">
+                <div class="stat-box">
+                    <i class="fas fa-list-ol"></i>
+                    <div class="stat-info">
+                        <span class="stat-value" id="totalQuestionsStat">20</span>
+                        <span class="stat-label">Всего вопросов</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-clock"></i>
+                    <div class="stat-info">
+                        <span class="stat-value" id="totalTimeStat">10:00</span>
+                        <span class="stat-label">Общее время</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-percentage"></i>
+                    <div class="stat-info">
+                        <span class="stat-value" id="accuracyStat">50%</span>
+                        <span class="stat-label">Точность</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-controls">
+                <button class="result-btn play-again-btn" onclick="playAgain()">
+                    <i class="fas fa-play-circle"></i> Играть ещё раз!
+                </button>
+                <button class="result-btn share-btn" onclick="shareResults()" title="Поделиться результатами">
+                    <i class="fas fa-share-alt"></i> Поделиться
+                </button>
+                <button class="result-btn home-btn" onclick="goHome()">
+                    <i class="fas fa-home"></i> На главную
+                </button>
+            </div>
         </div>
+        
+        <footer class="game-footer">
+            <p><i class="fas fa-star"></i> Спасибо за игру! Хотите улучшить результат? Сыграйте ещё раз!</p>
+        </footer>
     </div>
 
     <script src="js/script.js"></script>
