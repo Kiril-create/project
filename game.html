@@ -42,6 +42,18 @@
             </div>
         </div>
         
+        <!-- Индикатор подсказки -->
+        <div class="hint-indicator" id="hintIndicator">
+            <div class="hint-info">
+                <i class="fas fa-lightbulb"></i>
+                <span>Подсказка 50/50 доступна</span>
+                <div class="hint-counter">1</div>
+            </div>
+            <button class="hint-use-btn" onclick="useFiftyFiftyHint()" id="hintUseBtn">
+                Использовать
+            </button>
+        </div>
+        
         <!-- Таймер -->
         <div class="timer-container" id="timerContainer">
             <div class="timer-header">
@@ -54,15 +66,6 @@
             </div>
             <div class="timer-progress">
                 <div class="timer-bar" id="timerBar"></div>
-                <div class="timer-ticks">
-                    <span class="tick" style="left: 25%"></span>
-                    <span class="tick" style="left: 50%"></span>
-                    <span class="tick" style="left: 75%"></span>
-                </div>
-            </div>
-            <div class="timer-hint">
-                <i class="fas fa-exclamation-circle"></i>
-                <span id="timerHint">Успейте ответить до окончания времени!</span>
             </div>
         </div>
         
@@ -73,9 +76,9 @@
                     <i class="fas fa-question-circle"></i>
                     <span>Вопрос <span id="currentQuestion">1</span> из <span id="totalQuestions">20</span></span>
                 </div>
-                <div class="question-category">
-                    <i class="fas fa-tag"></i>
-                    <span>Видеоигры</span>
+                <div class="hint-status" id="hintStatus">
+                    <i class="fas fa-percentage"></i>
+                    <span>50/50: <span id="hintStatusText">доступна</span></span>
                 </div>
             </div>
             
@@ -87,21 +90,9 @@
             <div class="answers" id="answersContainer">
                 <!-- Кнопки ответов появятся здесь -->
             </div>
-            
-            <div class="question-progress">
-                <div class="progress-bar">
-                    <div class="progress" id="questionProgress"></div>
-                </div>
-                <div class="progress-text">
-                    Прогресс: <span id="progressPercent">5%</span>
-                </div>
-            </div>
         </div>
         
         <div class="game-controls">
-            <button class="control-btn hint-btn" onclick="showHint()" title="Подсказка (скоро)">
-                <i class="fas fa-lightbulb"></i> Подсказка
-            </button>
             <button class="control-btn restart-btn" onclick="restartGame()">
                 <i class="fas fa-redo"></i> Начать заново
             </button>
@@ -111,7 +102,7 @@
         </div>
         
         <footer class="game-footer">
-            <p><i class="fas fa-info-circle"></i> Управление: кликните по правильному ответу. Таймер: 30 секунд на вопрос.</p>
+            <p><i class="fas fa-info-circle"></i> Кликните на правильный ответ. Подсказка 50/50 убирает 2 неверных варианта</p>
         </footer>
     </div>
 
