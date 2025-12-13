@@ -30,12 +30,6 @@
                         <h3>Команда Синих</h3>
                     </div>
                     <div class="final-score" id="finalScoreA">0</div>
-                    <div class="final-team-stats">
-                        <div class="stat">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Правильных: <span id="correctA">0</span></span>
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="final-result-separator">
@@ -51,12 +45,6 @@
                         <h3>Команда Красных</h3>
                     </div>
                     <div class="final-score" id="finalScoreB">0</div>
-                    <div class="final-team-stats">
-                        <div class="stat">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Правильных: <span id="correctB">0</span></span>
-                        </div>
-                    </div>
                 </div>
             </div>
             
@@ -64,36 +52,9 @@
                 <!-- Сообщение о победителе -->
             </div>
             
-            <div class="game-stats">
-                <div class="stat-box">
-                    <i class="fas fa-list-ol"></i>
-                    <div class="stat-info">
-                        <span class="stat-value" id="totalQuestionsStat">20</span>
-                        <span class="stat-label">Всего вопросов</span>
-                    </div>
-                </div>
-                <div class="stat-box">
-                    <i class="fas fa-clock"></i>
-                    <div class="stat-info">
-                        <span class="stat-value" id="totalTimeStat">10:00</span>
-                        <span class="stat-label">Общее время</span>
-                    </div>
-                </div>
-                <div class="stat-box">
-                    <i class="fas fa-percentage"></i>
-                    <div class="stat-info">
-                        <span class="stat-value" id="accuracyStat">50%</span>
-                        <span class="stat-label">Точность</span>
-                    </div>
-                </div>
-            </div>
-            
             <div class="result-controls">
                 <button class="result-btn play-again-btn" onclick="playAgain()">
                     <i class="fas fa-play-circle"></i> Играть ещё раз!
-                </button>
-                <button class="result-btn share-btn" onclick="shareResults()" title="Поделиться результатами">
-                    <i class="fas fa-share-alt"></i> Поделиться
                 </button>
                 <button class="result-btn home-btn" onclick="goHome()">
                     <i class="fas fa-home"></i> На главную
